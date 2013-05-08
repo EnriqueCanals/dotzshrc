@@ -1,5 +1,5 @@
 if [[ -s /Users/enrique/.rvm/scripts/rvm ]] ; then source /Users/enrique/.rvm/scripts/rvm ; fi
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/android-sdk-mac/tools:/usr/local/bin/rubinius/1.2/bin:/Users/enrique/.npm/coffee-script/1.4.0/package/bin:/Users/enrique/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/enrique/.npm/coffee-script/1.4.0/package/bin:/usr/local/share/python:/Users/enrique/bin:$PATH"
 
 # 
 # GIT
@@ -34,7 +34,13 @@ colors
 
 alias work="cd ~/Projects/"
 
-alias ls="ls -a"
+alias qs="python -m SimpleHTTPServer"
+
+alias wgetbbl="wget http://code.jquery.com/jquery.js http://underscorejs.org/underscore.js http://backbonejs.org/backbone.js"
+
+alias lsa="ls -a"
+
+alias jekylls="jekyll --server"
 
 function parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -204,6 +210,3 @@ function trash () {
 function copypath () {
   echo -n $PWD | pbcopy
 }
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
